@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4CA4387-FB90-4C54-BBE6-5716626319EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CompVMInstaller.My.MyApplication</StartupObject>
+    <RootNamespace>CompVMInstaller</RootNamespace>
+    <AssemblyName>CompVMInstaller</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>E:\Projects\installer\CompVMInstaller-master\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://github.com/0blique/CompVMI_Updated.git/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.4.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Publish|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>0</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>075890E74209D0B3E69E3564794BC993BAC68BD4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CompVMInstaller_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>CompVMInstaller_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CompVMInstaller_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config" />
+    <None Include="Resources\animations.zip" />
+    <None Include="Resources\preload_room.bsp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_grenadelauncher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_grenadelauncher_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_stickybomb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\demo_stickybomb_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_gunslinger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_pda_build.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_pda_destruct.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_pistol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_pistol_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_pomson.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_shotgun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_shotgun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_toolbox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_wrangler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_wrench.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer_wrench_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_fists.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_minigun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_minigun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_sandvich.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_shotgun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_shotgun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heavy_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic_medigun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic_medigun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic_syringegun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medic_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_flamethrower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_flamethrower_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_flaregun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_shotgun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_shotgun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pyro_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_fan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_milk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_pistol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_pistol_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_push.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_scattergun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_scattergun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_shortstop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scout_drink.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_jarate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_smg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_smg_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_sniperrifle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_sniperrifle_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sniper_huntsman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_melee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_original.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_rocketlauncher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_rocketlauncher_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_shotgun.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_shotgun_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soldier_bison.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_disguisekit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_inviswatch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_knife.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_knife_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_revolver.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_revolver_inspect.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_sapper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_blank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spy_deadringer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compviewmodelbannersmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\icon_heavy.png" />
+    <None Include="Resources\icon_engie.png" />
+    <None Include="Resources\icon_demo.png" />
+    <None Include="Resources\icon_spy.png" />
+    <None Include="Resources\icon_soldier.png" />
+    <None Include="Resources\icon_sniper.png" />
+    <None Include="Resources\icon_scout.png" />
+    <None Include="Resources\icon_pyro.png" />
+    <None Include="Resources\icon_medic.png" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\pyro_gaspasser.jpg" />
+    <None Include="Resources\pyro_thermalthruster.jpg" />
+    <Content Include="test.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
